@@ -68,7 +68,7 @@ jobs:
           sed -i -e 's/${{ secrets.DS918_MAC1 }}"/&,\n\t"mac2": "${{ secrets.DS918_MAC2 }}",\n\t"netif_num": "2"/' ${{matrix.platform}}_user_config.json
           
           # 添加端口Map参数
-          sed -i -e 's/"netif_num": "2"/&,\n\t"SataPortMap": "664",\n\t"DiskIdxMap": "0C0006"/' ${{matrix.platform}}_user_config.json
+          sed -i -e 's/"netif_num": "2"/&,\n\t"SataPortMap": "666",\n\t"DiskIdxMap": "0C0006"/' ${{matrix.platform}}_user_config.json
 
           # 调整synoinfo
           sed -i -e 's/"synoinfo": {},/"synoinfo": {\n\t"maxlanport": "2"\n    },/' ${{matrix.platform}}_user_config.json
